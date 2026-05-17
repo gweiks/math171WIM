@@ -1,0 +1,159 @@
+\documentclass[11pt]{article}
+
+%==============================================================
+% PACKAGES
+%==============================================================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amssymb, amsthm, mathtools}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+
+\title{Construction and Properties of the Cantor Set}
+\author{George Weiksner \\ \small Stanford University, MATH 171}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+In this paper, we construct the Cantor set $C \subset [0,1]$ by the intersection of a sequence of a finite union of closed intervals. At each step in the sequence, we remove the open middle third of each closed interval within the union. We then prove 5 key properties of the Cantor set: $C$ is compact, has measure zero, is perfect, is totally disconnected, and is uncountable. The Cantor set is a critical example in mathematics which challenges intuition about relationships between definitions in cardinality, topology, and measure theory. 
+\end{abstract}
+
+\section{Introduction}
+In this paper, we construct the Cantor set $C$ and prove 5 key properties. First, we define an operator $T$ which removes the open middle third of each interval within a finite disjoint union of closed intervals. Then, we set $C_0 = [0,1]$ and $C_{n+1} = T(C_n)$. Finally, we define $C = \bigcap_{n=0}^{\infty} C_n$.
+
+From this construction, we establish that $C$ is compact, has measure zero, is perfect (closed with no isolated points), is totally disconnected (its only connected subsets are singletons) and is uncountable. The Cantor set is important because it holds many seemingly intuitive mathematical properties at the same time. The set has no length but has uncountably infinitely many points. The set has no isolated points but is totally disconnected. Through the example of the Cantor set, we can better understand these definitions through a case study that pushes their boundaries. 
+
+The paper is organized as follows. Section~\ref{sec:construction} constructs $C$ and proves a lemma describing the intermediate sets $C_n$. Section~\ref{sec:properties} proves the five properties stated above. This exposition follows the treatment in \cite{johnsonbaugh}.
+
+\section{Constructing the Cantor set}\label{sec:construction}
+
+[State the background definitions and results you will assume. Keep this brief; cite the textbook for anything standard.]
+
+\begin{definition}
+For a closed interval $[a,b] \subset \R$ with $a \le b$, define
+\[
+    T\left([a,b]\right) = \left[a, a + \tfrac{b-a}{3}\right] \cup \left[b - \tfrac{b-a}{3}, b\right].
+\]
+If $S = \bigcup_{i=1}^{n} I_i$ is a finite disjoint union of closed intervals, extend $T$ componentwise by
+\[
+    T(S) = \bigcup_{i=1}^{n} T(I_i).
+\]
+\end{definition}
+
+\begin{definition}
+Set $C_0 = [0,1]$ and $C_{n+1} = T(C_n)$ for $n \ge 0$. The Cantor set is
+\[
+    C =\bigcap_{n=0}^{\infty} C_n.
+\]
+\end{definition}
+
+
+\begin{example}
+    
+\end{example}
+
+\begin{lemma}\
+    For each $n \geq 0$, the set $C_n$ is a disjoint union of $2^n$ closed intervals, each of length $3^{-n}$. Moreover, $C_{n+1} \subset C_n$.
+\end{lemma}
+
+\begin{proof}
+    
+\end{proof}
+
+
+\section{Properties of the Cantor set}\label{sec:properties}
+
+\begin{theorem}
+$C$ is compact.
+\end{theorem}
+
+\begin{proof}
+\end{proof}
+
+\begin{lemma}
+$C$ is nonempty.
+\end{lemma}
+
+\begin{proof}
+[Proof.]
+\end{proof}
+
+\begin{definition} [Measure Zero]
+A set $S$ is measure zero if for every $\epsilon > 0$, $S$ can be covered by finitely many intervals of total length less than $\epsilon$.
+\end{definition}
+
+\begin{theorem}
+$C$ has measure zero.
+\end{theorem}
+
+\begin{proof}
+[Proof.]
+\end{proof}
+
+\begin{definition} [Isolated point]
+Let $(M,d)$ be a metric space and $S \subset M$. $x \in S$ is an isolated point of S if there exists an $\epsilon > 0$ such that $B_\epsilon(x) \cap S = \{x\}$. This can be interpreted as a resolution ($\epsilon$) existing such that $x$ has no nearby points in $S$.
+\end{definition}
+
+\begin{definition} [Perfect]
+A set $S$ is perfect if it is closed and has no isolated points. 
+\end{definition}
+
+\begin{theorem}
+$C$ is perfect.
+\end{theorem}
+
+\begin{proof}
+[Proof.]
+\end{proof}
+
+\begin{theorem}
+$C$ is totally disconnected (its only connected subsets are singletons).
+\end{theorem}
+
+\begin{proof}
+[Proof.]
+\end{proof}
+
+\begin{theorem}
+$C$ is uncountable
+\end{theorem}
+
+\begin{proof}
+[Proof.]
+\end{proof}
+
+\section{Conclusion}
+
+[Summarize what was shown. Optionally mention generalizations or further directions.]
+
+\begin{thebibliography}{9}
+
+\bibitem{johnsonbaugh}
+R.~Johnsonbaugh and W.~E. Pfaffenberger, \emph{Foundations of Mathematical Analysis}, Dover Publications, 2002.
+
+
+\end{thebibliography}
+
+\end{document}
